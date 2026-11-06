@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #333;
+    padding: 10px 250px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  header {
+    padding: 10px 0;
+    text-align: center;
+    background: #535353;
+    width: 100%;
+  }
+  
+  header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    color: rgb(251, 178, 8);
+  }
+  
+  .navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(251, 178, 8);
+    color: black;
+    border-radius: 30px;
+  }
+  

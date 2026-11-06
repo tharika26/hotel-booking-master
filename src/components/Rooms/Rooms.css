@@ -1,0 +1,251 @@
+/* General Container and Header */
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Rooms Section Layout */
+.rooms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Room Card Styles */
+.room {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    flex: 1 1 calc(33% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Room Image Styles */
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.room:hover img {
+    transform: scale(1.05);
+}
+
+/* Room Content Styles */
+.room-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.room-content .rate h1 {
+    font-size: 2em;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.room-content .rate p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Book Now Button Styles */
+.book-now {
+    margin-top: 15px;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #ff3e55, #ffa647);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Room Details Container for Single, Double, and Luxury Pages */
+.room-details-container {
+    display: flex;
+    width: 80%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.image-section {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.details-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.details-section h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.details-section .price {
+    font-size: 24px;
+    color: #333;
+
+}
+
+.details-section .price span {
+    color: #e74c3c;
+    font-weight: bold;
+
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Book Room Link Button */
+.add-room {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.add-room:hover {
+    background-color: linear-gradient(135deg, #ff3e55, #ffa647);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
+}
+
+/* Capacity Information */
+.capacity-info {
+    margin-top: 10px;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .room {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .room {
+        flex: 1 1 100%;
+    }
+
+    .room img {
+        height: 180px;
+    }
+
+    .room-details-container {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .details-section .price {
+        font-size: 20px;
+    }
+}

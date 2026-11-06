@@ -1,0 +1,206 @@
+/* General Page Layout */
+.restaurant-page {
+  margin-top: 5%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.restaurant-container {
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.restaurant-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.restaurant-col {
+  width: 100%;
+  padding: 20px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 80%;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+.active-slide {
+  display: block;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Caption and Number Text */
+.slide-number {
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.slide-caption {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Navigation Dots */
+.dot-container {
+  text-align: center;
+  padding: 15px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active-dot {
+  background-color: #717171;
+}
+
+.dot:hover {
+  background-color: #444;
+}
+
+/* Content and Typography */
+.restaurant-title {
+  font-size: 2em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.restaurant-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.restaurant-strong {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.restaurant-em {
+  color: #555;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .slideshow-container {
+    width: 90%;
+  }
+  
+  .slide img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-title {
+    font-size: 1.8em;
+  }
+
+  .slide img {
+    height: 300px;
+  }
+
+  .slide-caption {
+    font-size: 18px;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .restaurant-container {
+    padding: 10px;
+  }
+
+  .restaurant-col {
+    padding: 10px;
+  }
+
+  .restaurant-title {
+    font-size: 1.5em;
+  }
+
+  .restaurant-text {
+    font-size: 1em;
+  }
+
+  .slide-caption {
+    font-size: 16px;
+  }
+
+  .slide-number {
+    font-size: 14px;
+  }
+}
